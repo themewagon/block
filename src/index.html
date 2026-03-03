@@ -1,0 +1,1003 @@
+<!doctype html>
+<html lang="en"  x-data="{ open: false }">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <!-- Favicon icon-->
+<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png" />
+<link rel="manifest" href="./assets/images/favicon/site.webmanifest" />
+<link rel="mask-icon" href="./assets/images/favicon/block-safari-pinned-tab.svg" color="#8b3dff" />
+<link rel="shortcut icon" href="./assets/images/favicon/favicon.ico" />
+<meta name="msapplication-TileColor" content="#8b3dff" />
+<meta name="msapplication-config" content="./assets/images/favicon/tile.xml" />
+
+  <title>Block - Tailwind CSS Templates</title>
+
+  <!-- Tabler Icons -->
+  
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+
+</head>
+
+<body class="">
+<!-- Navbar -->
+    <nav class="bg-white border-b border-gray-200 fixed top-0 w-full z-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+          <!-- Logo -->
+          <a href="index.html" class="text-xl font-semibold text-gray-900">
+            <img src="./assets/images/logo/logo.svg" alt="">
+          </a>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-6">
+           <a href="#home" class="text-gray-700 hover:text-purple-500 scroll-smooth" onclick="scrollToSection('home', event)">Home</a>
+           
+            <a href="#features" class="text-gray-700 hover:text-purple-500 scroll-smooth" onclick="scrollToSection('features', event)">Features</a>
+            <a href="#services" class="text-gray-700 hover:text-purple-500 scroll-smooth" onclick="scrollToSection('services', event)">Services</a>
+            <a href="#testimonial" class="text-gray-700 hover:text-purple-500 scroll-smooth" onclick="scrollToSection('testimonial', event)">Testimonials</a>
+            <a href="#integrations" class="text-gray-700 hover:text-purple-500 scroll-smooth" onclick="scrollToSection('integrations', event)">Integrations</a>
+           
+          </div>
+
+          <!-- Right side icons -->
+          <div class="hidden lg:flex items-center space-x-4">
+          <a href="#" class="btn btn-outline-white">Login</a>
+          <a href="#" class="btn btn-primary">Create Account</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            class="md:hidden text-gray-700 focus:outline-none"
+            @click="open = !open"
+          >
+            <svg
+              x-show="!open"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg
+              x-show="open"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div x-show="open" class="md:hidden bg-white border-t border-gray-200">
+        <div class="space-y-1 px-4 py-3">
+            <a href="#home" class="block text-gray-700 hover:text-purple-500 py-2 scroll-smooth" onclick="scrollToSection('home', event)">Home</a>
+            <a href="#features" class="block text-gray-700 hover:text-purple-500 py-2 scroll-smooth" onclick="scrollToSection('features', event)">Features</a>
+            <a href="#services" class="block text-gray-700 hover:text-purple-500 py-2 scroll-smooth" onclick="scrollToSection('services', event)">Services</a>
+            <a href="#testimonial" class="block text-gray-700 hover:text-purple-500 py-2 scroll-smooth" onclick="scrollToSection('testimonial', event)">Testimonials</a>
+            <a href="#integrations" class="block text-gray-700 hover:text-purple-500 py-2 scroll-smooth" onclick="scrollToSection('integrations', event)">Integrations</a>
+              
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-16 ">
+     <section class="lg:py-24 py-12" id="home">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+      <div class="grid lg:grid-cols-12 grid-cols-1 gap-8 items-center">
+        <div class=" lg:col-start-1 lg:col-end-6 col-span-12 text-center sm:text-left">
+          <span class="badge bg-white border border-purple-500 rounded-full text-purple-500 px-4 ">New: Our Live collaborative just landed</span>
+
+         <div class="my-6">
+          <h1 class="lg:text-[3.4rem] text-3xl lg:leading-14 mb-4 font-bold ">Build your next project even faster.</h1>
+          <p class="text-lg ">Block makes it easy to get your most important work done. Increase efficiency to deliver result & hit your goal on every project.</p>
+          <div class="my-6 gap-3 flex justify-center sm:justify-start">
+            <a href="#" class="btn btn-primary">Try for Free</a>
+            <a href="#" class="btn btn-outline-white">Book a Demo</a>
+          </div>
+        </div>
+          <div class="flex md:flex-row flex-col items-center  gap-6">
+            <div class="flex items-center md:justify-center gap-3">
+              <span class="h-9 w-9 border border-gray-200 rounded-lg flex items-center justify-center px-3 py-2">
+                <i class="ti ti-credit-card text-purple-500 text-xl "></i>
+              </span>
+              <span>No credit card required</span>
+            </div>
+            <div class="flex items-center  md:justify-center gap-3">
+            <span class="h-9 w-9 border border-gray-200 rounded-lg flex items-center justify-center px-3 py-2">
+              <i class="ti ti-cash-banknote text-purple-500 text-xl "></i>
+            </span>
+            <span>Free until upgrade</span></div>
+
+</div>
+        </div>
+        <div class="lg:col-start-7 lg:col-end-14 col-span-12">
+          <div class="relative">
+                        <div class="bg-gray-100 md:p-4 p-2 rounded-xl border border-gray-200 scene" data-relative-input="true">
+                           <div data-depth="0.09">
+                              <figure  >
+                                 <img src="./assets/images/app-screen-1.jpg" alt="landing" class="w-full rounded-xl shadow border border-gray-200" />
+                              </figure>
+                           </div>
+                        </div>
+                        <div class="absolute top-50 -mt-10 left-0 -ms-4 hidden lg:block">
+                           <div class="badge bg-cyan-500 text-white   rounded-full">Developer</div>
+                           <div class="absolute top-0 end-0 -mt-3 -mr-3">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M22.3722 2.21902C22.4794 2.32632 22.5515 2.46361 22.5791 2.61278C22.6067 2.76194 22.5884 2.91597 22.5267 3.05452L14.0412 22.1465C13.9819 22.28 13.8849 22.3933 13.7621 22.4725C13.6393 22.5517 13.4961 22.5933 13.35 22.5921C13.2039 22.591 13.0613 22.5473 12.9397 22.4662C12.8182 22.3852 12.7229 22.2704 12.6657 22.136L9.60416 14.987L2.45366 11.924C2.31974 11.8664 2.20552 11.771 2.12495 11.6496C2.04439 11.5281 2.00097 11.3857 2.00002 11.24C1.99906 11.0942 2.04061 10.9513 2.11958 10.8288C2.19854 10.7062 2.31151 10.6094 2.44466 10.55L21.5367 2.06452C21.675 2.00309 21.8287 1.98497 21.9776 2.01255C22.1265 2.04012 22.265 2.1121 22.3722 2.21902Z"
+                                    fill="#0DCAF0" />
+                              </svg>
+                           </div>
+                        </div>
+                        <div class="absolute bottom-50 mb-n10 left-0 hidden lg:block">
+                           <div class="badge bg-green-500 text-white  rounded-full">Manager</div>
+                           <div class="absolute top-0 end-0 -mt-3 -mr-3">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M22.3722 2.21902C22.4794 2.32632 22.5515 2.46361 22.5791 2.61278C22.6067 2.76194 22.5884 2.91597 22.5267 3.05452L14.0412 22.1465C13.9819 22.28 13.8849 22.3933 13.7621 22.4725C13.6393 22.5517 13.4961 22.5932 13.35 22.5921C13.2039 22.591 13.0613 22.5473 12.9397 22.4662C12.8182 22.3852 12.7229 22.2704 12.6657 22.136L9.60416 14.987L2.45366 11.924C2.31974 11.8664 2.20552 11.771 2.12495 11.6496C2.04439 11.5281 2.00097 11.3857 2.00002 11.24C1.99906 11.0942 2.04061 10.9513 2.11958 10.8288C2.19854 10.7062 2.31151 10.6094 2.44466 10.55L21.5367 2.06452C21.675 2.00309 21.8287 1.98497 21.9776 2.01255C22.1265 2.04012 22.265 2.1121 22.3722 2.21902Z"
+                                    fill="#198754" />
+                              </svg>
+                           </div>
+                        </div>
+                        <div class="absolute bottom-0 me-n8 end-0 hidden lg:block">
+                           <div class="badge bg-red-500 text-white   rounded-full">Designer</div>
+                           <div class="absolute top-0 left-0 -mt-3 -ml-3">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M2.21946 2.21902C2.11223 2.32632 2.04007 2.46361 2.01248 2.61278C1.9849 2.76194 2.0032 2.91597 2.06496 3.05452L10.5505 22.1465C10.6097 22.28 10.7067 22.3933 10.8295 22.4725C10.9523 22.5517 11.0956 22.5933 11.2416 22.5921C11.3877 22.591 11.5303 22.5473 11.6519 22.4662C11.7735 22.3852 11.8687 22.2704 11.926 22.136L14.9875 14.987L22.138 11.924C22.2719 11.8664 22.3861 11.771 22.4667 11.6496C22.5472 11.5281 22.5906 11.3857 22.5916 11.24C22.5926 11.0942 22.551 10.9513 22.472 10.8288C22.3931 10.7062 22.2801 10.6094 22.147 10.55L3.05496 2.06452C2.91659 2.00309 2.76287 1.98497 2.61402 2.01255C2.46516 2.04012 2.32664 2.1121 2.21946 2.21902Z"
+                                    fill="#DC3545" />
+                              </svg>
+                           </div>
+                        </div>
+                        <div class="absolute top-0 mt-10 end-0 hidden lg:block">
+                           <div class="badge bg-purple-500 text-white   rounded-full">User</div>
+                           <div class="absolute top-0 left-0 -mt-3 -ml-3">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M2.21946 2.21902C2.11223 2.32632 2.04007 2.46361 2.01248 2.61278C1.9849 2.76194 2.0032 2.91597 2.06496 3.05452L10.5505 22.1465C10.6097 22.28 10.7067 22.3933 10.8295 22.4725C10.9523 22.5517 11.0956 22.5933 11.2416 22.5921C11.3877 22.591 11.5303 22.5473 11.6519 22.4662C11.7735 22.3852 11.8687 22.2704 11.926 22.136L14.9875 14.987L22.138 11.924C22.2719 11.8664 22.3861 11.771 22.4667 11.6496C22.5472 11.5281 22.5906 11.3857 22.5916 11.24C22.5926 11.0942 22.551 10.9513 22.472 10.8288C22.3931 10.7062 22.2801 10.6094 22.147 10.55L3.05496 2.06452C2.91659 2.00309 2.76287 1.98497 2.61402 2.01255C2.46516 2.04012 2.32664 2.1121 2.21946 2.21902Z"
+                                    fill="#8B3DFF" />
+                              </svg>
+                           </div>
+                        </div>
+                     </div>
+        </div>
+
+      </div>
+      </div>
+
+     </section>
+       <!--Trusted worldwide start-->
+         <div class="lg:py-16 py-12" >
+       
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+               <div class="grid grid-cols-12">
+                  <div class="col-span-12 lg:col-span-10 lg:col-start-2">
+                     <div class="text-center mb-8 lg:mb-10">
+                        <small class="uppercase tracking-wider font-semibold ">
+                           Trusted by
+                           <span class="font-bold text-gray-900">20,000+</span>
+                           organizations worldwide
+                        </small>
+                     </div>
+                     <div
+                        class="swiper-container swiper" style="--swiper-theme-color: #8B3DFF;"
+                        id="swiper-1"
+                        data-pagination-type=""
+                        data-speed="400"
+                        data-space-between="100"
+                        data-pagination="true"
+                        data-navigation="false"
+                        data-autoplay="true"
+                        data-autoplay-delay="3000"
+                        data-breakpoints='{"390": {"slidesPerView": 2}, "768": {"slidesPerView": 3}, "1024": {"slidesPerView": 5}}'>
+                        <div class="swiper-wrapper pb-12">
+                           <div class="swiper-slide">
+                              <figure class="text-center">
+                                 <img src="./assets/images/client-logo/clients-logo-1.svg" alt="logo" />
+                              </figure>
+                           </div>
+                           <div class="swiper-slide">
+                              <figure class="text-center">
+                                 <img src="./assets/images/client-logo/clients-logo-2.svg" alt="logo" />
+                              </figure>
+                           </div>
+                           <div class="swiper-slide">
+                              <figure class="text-center">
+                                 <img src="./assets/images/client-logo/clients-logo-3.svg" alt="logo" />
+                              </figure>
+                           </div>
+                           <div class="swiper-slide">
+                              <figure class="text-center">
+                                 <img src="./assets/images/client-logo/clients-logo-4.svg" alt="logo" />
+                              </figure>
+                           </div>
+                           <div class="swiper-slide">
+                              <figure class="text-center">
+                                 <img src="./assets/images/client-logo/clients-logo-5.svg" alt="logo" />
+                              </figure>
+                           </div>
+                           <!-- Add more slides as needed -->
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Add Navigation -->
+                        <div class="swiper-navigation">
+                           <div class="swiper-button-next"></div>
+                           <div class="swiper-button-prev"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--Trusted worldwide end-->
+          <!--Features start-->
+         <section class="lg:py-20 py-5" id="features">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+               <div class="grid grid-cols-12 ">
+                  <div class="lg:col-span-8 lg:col-start-3 col-span-12">
+                     <div class="text-center mb-6 lg:mb-14">
+                        <small class="text-purple-500 uppercase tracking-wider font-semibold">features</small>
+                        <h2 class="my-3 text-3xl">Features to make you stand out</h2>
+                        <p class="mb-0 text-xl">Manage your projects from start to finish. With all of your projects in Block, you’ll always know who’s doing what, by when.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="grid grid-cols-12 gap-10">
+                  <div class="lg:col-span-4 md:col-span-6 col-span-12">
+                     <div class="flex flex-col  items-center md:items-start text-center md:text-left" >
+                        <div class="w-12 h-12 bg-purple-100 text-purple-500 rounded-lg flex items-center justify-center mb-5 border border-purple-400">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-square-rounded-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 12l2 2l4 -4" /><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z" /></svg>
+                        </div>
+
+                        <h4 class="text-lg mb-2">Tasks</h4>
+                        <p class="mb-0">Break work into manageable pieces for you and your team. Dui erat malesuada diam.</p>
+                     </div>
+                  </div>
+                      <div class="lg:col-span-4 md:col-span-6 col-span-12">
+                     <div class="flex flex-col  items-center md:items-start text-center md:text-left" >
+                        <div class="w-12 h-12 bg-purple-100 text-purple-500 rounded-lg flex items-center justify-center mb-5 border border-purple-400">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-flag-3"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 14h14l-4.5 -4.5l4.5 -4.5h-14v16" /></svg>
+                        </div>
+
+                         <h4 class="text-lg mb-2">Milestones</h4>
+                        <p class="mb-0">Visualise significant checkpoints in your project to measure and share progress.</p>
+                     </div>
+                  </div>
+                      <div class="lg:col-span-4 md:col-span-6 col-span-12">
+                     <div class="flex flex-col  items-center md:items-start text-center md:text-left" >
+                        <div class="w-12 h-12 bg-purple-100 text-purple-500 rounded-lg flex items-center justify-center mb-5 border border-purple-400">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-clock"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M12 7v5l3 3" /></svg>
+                        </div>
+
+                        <h4 class="text-lg mb-2">Due dates and times</h4>
+                        <p class="mb-0">Specify the date and time something is due so everyone’s working off the same deadline.</p>
+                     </div>
+                  </div>
+                      <div class="lg:col-span-4 md:col-span-6 col-span-12">
+                     <div class="flex flex-col  items-center md:items-start text-center md:text-left" >
+                        <div class="w-12 h-12 bg-purple-100 text-purple-500 rounded-lg flex items-center justify-center mb-5 border border-purple-400">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-article"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" /><path d="M7 8h10" /><path d="M7 12h10" /><path d="M7 16h10" /></svg>
+                        </div>
+
+                         <h4 class="text-lg mb-2">Custom templates</h4>
+                        <p class="mb-0">Create your own project templates so your team can quickly and easily kick off work.</p>
+                     </div>
+                  </div>
+                      <div class="lg:col-span-4 md:col-span-6 col-span-12">
+                     <div class="flex flex-col  items-center md:items-start text-center md:text-left" >
+                        <div class="w-12 h-12 bg-purple-100 text-purple-500 rounded-lg flex items-center justify-center mb-5 border border-purple-400">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-paperclip"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 7l-6.5 6.5a1.5 1.5 0 0 0 3 3l6.5 -6.5a3 3 0 0 0 -6 -6l-6.5 6.5a4.5 4.5 0 0 0 9 9l6.5 -6.5" /></svg>
+                        </div>
+
+                         <h4 class="text-lg mb-2">Attachments</h4>
+                        <p class="mb-0">Add files from your computer, Dropbox, Box, or Google Drive to any task or conversation.</p>
+                     </div>
+                  </div>
+                      <div class="lg:col-span-4 md:col-span-6 col-span-12">
+                     <div class="flex flex-col  items-center md:items-start text-center md:text-left" >
+                        <div class="w-12 h-12 bg-purple-100 text-purple-500 rounded-lg flex items-center justify-center mb-5 border border-purple-400">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-users"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg>
+                        </div>
+
+                         <h4 class="text-lg mb-2">Teammate</h4>
+                        <p class="mb-0">Understand teammate workloads by viewing tasks assigned to them.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!--Features end-->
+       <!--Visualize & plan start-->
+         <section class="lg:py-20 py-8" id="services">
+           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+               <div class="grid grid-cols-12 items-center gap-8">
+                  <div class="lg:col-span-5 md:col-span-6 col-span-12" >
+                     <div>
+                        <small class="text-purple-500 uppercase tracking-widest font-semibold">Visualize & plan</small>
+                        <div class="mb-6 mt-6">
+                           <h2 class="mb-3 text-3xl">Build the perfect workflow for every project.</h2>
+                           <p class="mb-0 text-xl">Track your entire project from start to finish with beautiful views that make project planning a breeze.</p>
+                        </div>
+
+                        <a href="#" class="text-purple-500 font-semibold inline-flex items-center hover:underline gap-3">
+                           Learn More
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M15 16l4 -4" /><path d="M15 8l4 4" /></svg>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="lg:col-start-7 lg:col-end-14 md:col-span-6 col-span-12" >
+                     <div class="relative rellax" data-rellax-percentage="1" data-rellax-speed="0.8" data-disable-parallax-down="md">
+                        <figure>
+                           <img src="./assets/images/saas-img-1.jpg" alt="landing" class="img-fluid rounded-xl" />
+                        </figure>
+                        <div class="flex-col absolute bottom-0 lg:mx-4 mb-10 flex items-center justify-between ms-2">
+                           <div
+                              class="w-full flex items-center p-2 justify-between bg-white mb-2 rounded-xl ms-2 lg:ms-7 rellax"
+                              data-rellax-percentage="0.4"
+                              data-rellax-speed="0.4"
+                              data-disable-parallax-down="md">
+                              <div class="flex items-center">
+                                 <img src="./assets/images/avatar/avatar-1.jpg" alt="avatar" class="h-10 w-10 rounded-full me-2" />
+                                 <h6 class="mb-0 text-truncate">Jitu Doe</h6>
+                              </div>
+                              <div>
+                                 <div class="lg:ms-7 lg:ps-6">
+                                    <div class="badge bg-purple-200 text-purple-700">Designer</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div
+                              class="w-full flex items-center p-2 justify-between bg-white mb-2 rounded-xl rellax"
+                              data-rellax-percentage="0.5"
+                              data-rellax-speed="0.5"
+                              data-disable-parallax-down="md">
+                              <div class="flex items-center">
+                                 <img src="./assets/images/avatar/avatar-2.jpg" alt="avatar" class="h-10 w-10 rounded-full me-2" />
+                                 <h6 class="mb-0 text-truncate">Anita Par</h6>
+                              </div>
+                              <div>
+                                 <div class="lg:ms-7 lg:ps-6">
+                                    <div class="badge bg-cyan-200 text-cyan-700">UI Developer</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div
+                              class="w-full flex items-center p-2 justify-between bg-white mb-2 rounded-xl rellax ms-4 lg:ms-7"
+                              data-rellax-percentage="0.6"
+                              data-rellax-speed="0.6"
+                              data-disable-parallax-down="md">
+                              <div class="flex items-center">
+                                 <img src="./assets/images/avatar/avatar-4.jpg" alt="avatar" class="h-10 w-10 rounded-full me-2" />
+                                 <h6 class="mb-0 text-truncate">Sandip</h6>
+                              </div>
+                              <div>
+                                 <div class="lg:ms-7 lg:ps-6">
+                                    <div class="badge bg-green-200 text-green-700">Stack Developer</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               </div>
+          
+         </section>
+         <!--Collaborate start-->
+         <section class="lg:py-20 py-8" >
+           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+               <div class="grid grid-cols-12 items-center gap-6">
+                  <div class="md:col-span-6 col-span-12 lg:order-2 order-1" >
+                     <div class="relative rellax mb-7 lg:mb-0" data-rellax-percentage="1" data-rellax-speed="0.8" data-disable-parallax-down="md">
+                        <figure>
+                           <img src="./assets/images/saas-img-2.jpg" alt="landing" class="img-fluid rounded-xl" />
+                        </figure>
+                        <div class="flex flex-col absolute bottom-0 mb-8 mx-4">
+                           <img
+                              src="./assets/images/avatar/avatar-1.jpg"
+                              alt="avatar"
+                              class="h-12 w-12 rounded-full border-2 border-white   rellax"
+                              data-rellax-percentage="0.4"
+                              data-rellax-speed="0.4"
+                              data-disable-parallax-down="md" />
+                           <img
+                              src="./assets/images/avatar/avatar-2.jpg"
+                              alt="avatar"
+                              class="h-12 w-12 rounded-full border-2 border-white   rellax"
+                              data-rellax-percentage="0.5"
+                              data-rellax-speed="0.5"
+                              data-disable-parallax-down="md" />
+                           <img
+                              src="./assets/images/avatar/avatar-3.jpg"
+                              alt="avatar"
+                              class="h-12 w-12 rounded-full border-2 border-white  rellax"
+                              data-rellax-percentage="0.6"
+                              data-rellax-speed="0.6"
+                              data-disable-parallax-down="md" />
+                        </div>
+                     </div>
+                  </div>
+                  <div class="lg:col-start-8 lg:col-end-14 md:col-span-6 col-span-12 lg:order-2 order-1" >
+                     <div class="mt-md-5">
+                        <small class="text-purple-500 uppercase tracking-widest font-semibold">Collaborate</small>
+                        <div class="mb-6 mt-6">
+                           <h2 class="mb-3 text-3xl">Move team ideas to action, faster.</h2>
+                           <p class=" mb-0 text-xl">Collaborate and build total alignment on your project by adding comments to any task or document.</p>
+                        </div>
+                        <ul class=" mb-5">
+                           <li class="mb-2 flex">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-circle-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z" /></svg>
+                              <span class="ms-2">Fusce ultricies velit fel dignissim</span>
+                           </li>
+                           <li class="mb-2 flex">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-circle-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z" /></svg>
+                              <span class="ms-2">Suspendisse potenti. Mauris et ipsum odio.</span>
+                           </li>
+                           <li class="mb-2 flex">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-circle-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z" /></svg>
+                              <span class="ms-2">Pellentesque imperdiet blandit pretium.</span>
+                           </li>
+                        </ul>
+
+                        <a href="#" class="text-purple-500 font-semibold inline-flex items-center hover:underline gap-3">
+                           Learn More
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M15 16l4 -4" /><path d="M15 8l4 4" /></svg>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+          </div>
+         </section>
+         <!--Collaborate end-->
+
+         <!--Visualize & plan end-->
+           <!--Testimonial start-->
+         <section class="bg-gray-50 lg:py-16 py-8"  id="testimonial">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+               <div class="grid grid-cols-12 mb-10">
+                  <div class="col-span-12">
+                     <div class="text-center">
+                        <small class="text-purple-500 uppercase tracking-wider font-semibold">Testimonial</small>
+                        <h2 class="mt-3 mb-0 text-3xl">Our happy customer love us</h2>
+                     </div>
+                  </div>
+               </div>
+               <div class="grid grid-cols-12">
+                  <div class="col-span-10 col-start-2">
+                     <div
+                        class="swiper-container swiper" style="--swiper-theme-color: #8B3DFF;"
+                        
+                        id="swiper-1"
+                        data-pagination-type=""
+                        data-speed="400"
+                        data-space-between="100"
+                        data-pagination="true"
+                        data-navigation="false"
+                        data-autoplay="true"
+                        data-autoplay-delay="3000"
+                        data-breakpoints='{"480": {"slidesPerView": 1}, "768": {"slidesPerView": 1}, "1024": {"slidesPerView": 1}}'>
+                        <div class="swiper-wrapper pb-6">
+                           <div class="swiper-slide">
+                              <div class="card">
+                                 <div class="grid grid-cols-12 items-center gap-6">
+                                    <div class="xl:col-span-4 lg:col-span-5 col-span-12 overflow-hidden hidden lg:block">
+                                       <img src="./assets/images/testimonial/testimonial-img-1.jpg" class="w-full rounded-xl" alt="testimonials" />
+                                    </div>
+                                    <div class="xl:col-span-8 lg:col-span-7 col-span-12">
+                                       <div class="card-body p-4 px-xl-0">
+                                          <div class="mb-6 text-inverse">
+                                             <img src="./assets/images/client-logo/logoipsum-3.svg" alt="ipsum" />
+                                          </div>
+                                          <p class="card-text text-lg mb-7">
+                                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."
+                                          </p>
+
+                                          <h5 class="mb-0">Katherine Moss</h5>
+                                          <small class="text-body-tertiary">Operational Manager at Block Studio</small>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="card">
+                                 <div class="grid grid-cols-12 items-center gap-6">
+                                    <div class="xl:col-span-4 lg:col-span-5 col-span-12 overflow-hidden hidden lg:block">
+                                       <img src="./assets/images/testimonial/testimonial-img-2.jpg" class="w-full rounded-xl" alt="testimonials" />
+                                    </div>
+                                    <div class="xl:col-span-8 lg:col-span-7 col-span-12">
+                                       <div class="card-body p-4 px-xl-0">
+                                          <div class="mb-6 text-inverse">
+                                             <img src="./assets/images/client-logo/logoipsum-2.svg" alt="ipsum" />
+                                          </div>
+                                          <p class="card-text text-lg mb-7">
+                                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."
+                                          </p>
+
+                                          <h5 class="mb-0">Katherine Moss</h5>
+                                          <small class="text-body-tertiary">Operational Manager at Block Studio</small>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="card">
+                                 <div class="grid grid-cols-12 items-center gap-6">
+                                    <div class="xl:col-span-4 lg:col-span-5 col-span-12 overflow-hidden hidden lg:block">
+                                       <img src="./assets/images/testimonial/testimonial-img-3.jpg" class="w-full rounded-xl" alt="testimonials" />
+                                    </div>
+                                    <div class="xl:col-span-8 lg:col-span-7 col-span-12">
+                                       <div class="card-body p-4 px-xl-0">
+                                          <div class="mb-6 text-inverse">
+                                             <img src="./assets/images/client-logo/logoipsum-1.svg" alt="ipsum" />
+                                          </div>
+                                          <p class="card-text text-lg mb-7">
+                                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."
+                                          </p>
+
+                                          <h5 class="mb-0">Katherine Moss</h5>
+                                          <small class="text-body-tertiary">Operational Manager at Block Studio</small>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- Add more slides as needed -->
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Add Navigation -->
+                        <div class="swiper-navigation">
+                           <div class="swiper-button-next"></div>
+                           <div class="swiper-button-prev"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!--Testimonial end-->
+
+          <!--Integrate apps start-->
+         <section class=" bg-gray-100 py-20"  id="integrations">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+               <div class="grid grid-cols-12 mb-7 pb-2 justify-between">
+                  <div class="lg:col-span-6 lg:col-start-4 col-span-12">
+                     <div class="text-center  pb-2">
+                        <h2 class="mb-3 text-3xl">Integrate apps with just a few clicks</h2>
+                        <p class="mb-0">Connect your existing apps and workflows with pre-made integrations available for 400+ popular apps, plus custom integrations for more advanced users.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="grid grid-cols-12 mb-7 pb-2 text-center justify-center gap-0">
+                  <div class="col-span-12">
+                     <div class="marquee" >
+                        <div class="track">
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-1.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Microsoft Team</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-12.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Calendar</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-9.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Jira</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-4.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Slack</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-15.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Salesforce</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-2.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Zoom</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-3.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Tableau</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-12.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Calendar</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-4.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Slack</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-15.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Salesforce</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-2.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Zoom</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-3.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Tableau</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-12.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Calendar</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-2.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Zoom</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-2.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Zoom</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-3.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Tableau</span>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-span-12 lg:px-7">
+                     <div class="marquee" >
+                        <div class="track-2">
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-7.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">MS Teams</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-10.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">HubSpot</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-6.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">OneDrive</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-2.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Zoom</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-14.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">GitHub</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-13.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Gmail</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-11.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Google</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-14.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">GitHub</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-13.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Gmail</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-10.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">HubSpot</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-6.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">OneDrive</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-2.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Zoom</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-14.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">GitHub</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-13.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Gmail</span>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-span-12">
+                     <div class="marquee" >
+                        <div class="track">
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-8.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">MS Excel</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-4.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Slack</span>
+                           </a>
+
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-2.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Zoom</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-3.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Tableau</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-15.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Dropbox</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-5.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Salesforce</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-9.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Jira</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-8.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">MS Excel</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-4.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Slack</span>
+                           </a>
+
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-2.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Zoom</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-3.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Tableau</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-15.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Dropbox</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-5.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Salesforce</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-9.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Jira</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-15.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Dropbox</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-5.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Salesforce</span>
+                           </a>
+                           <a href="#" class="btn btn-light rounded-full me-1 mb-3 btn-logo btn-lift">
+                              <span><img src="./assets/images/integration-logo/integrate-logo-9.svg" alt="logo" class="h-6 w-6" /></span>
+                              <span class="ms-1 hidden lg:inline-flex text-sm">Jira</span>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="grid grid-cols-12">
+                  <div class="col-span-12">
+                     <div class="text-center flex justify-center items-center flex-col md:flex-row gap-4">
+                        <a href="#" class="btn btn-dark me-4">Get Started</a>
+                        <a href="#" class="text-purple-500 hover:underline mt-3 md:mt-0 flex items-center gap-2">
+                           <span>See all integrations</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M15 16l4 -4" /><path d="M15 8l4 4" /></svg>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               </div>
+           
+         </section>
+         <!--Integrate apps end-->
+          <!--Call to action start-->
+         <section class="my-16" id="contact">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" >
+                  <div class="grid grid-cols-12 bg-pattern bg-linear-to-b from-[#9b58ff] via-[#8837ff] to-[#7a20ff] rounded-xl lg:p-14 p-6 g-0 ">
+                    <div class="lg:col-span-8 lg:col-start-3 col-span-12 justify-center text-center">
+                      <div class="relative z-1 my-lg-5">
+                        <div class="mb-8 text-center">
+                           <h3 class="text-3xl text-white mb-1">Try our powerful work management tools</h3>
+                           <p class="mb-0 text-white">Sign up for a free two-week trial of Block today — no credit card required.</p>
+                        </div>
+                        <form class="grid grid-cols-12 gap-3  lg:mx-12" >
+                           <div class="md:col-span-7 md:col-start-2 col-span-12">
+                             <label for="notificationEmail" class="visually-hidden"></label>
+                             <input type="email" id="notificationEmail" class="block w-full rounded-lg border-gray-200 focus:border-gray-300 focus:ring focus:ring-gray-200 focus:ring-opacity-50" placeholder="Enter your business email" aria-label="Enter your business email" required />
+                            
+                           </div>
+                           <div class="md:col-span-4 col-span-12">
+                             <div class="grid justify-between">
+                               <button class="btn btn-dark" type="submit">Get notified for free</button>
+                             </div>
+                           </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+         </section>
+         <!--Call to action end-->
+
+    </main>
+<footer class="pt-7">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Footer 4 column -->
+      <div class="grid grid-cols-12 gap-6">
+         <div class="lg:col-span-9 col-span-12">
+            <div class="grid grid-cols-12 gap-6" id="ft-links">
+               <div class="lg:col-span-3 md:col-span-6 col-span-12">
+                  <div class="relative">
+                     <div class="mb-3 pb-2 flex justify-between border-b border-gray-200 lg:border-b-0">
+                        <h4 class="text-lg">Service</h4>
+                        
+                     </div>
+                     <div class=""  >
+                        <ul class=" mb-0">
+                           <li class="mb-2">
+                              <a href="./index.html" class="hover:text-purple-500 ">Web App Development</a>
+                           </li>
+                           <li class="mb-2">
+                              <a href="#!" class="hover:text-purple-500 ">Front End Development</a>
+                           </li>
+                           <li class="mb-2">
+                              <a href="#!" class="hover:text-purple-500 ">MVP Development</a>
+                           </li>
+                           <li class="mb-2">
+                              <a href="#!" class="hover:text-purple-500 ">Digital Marketing</a>
+                           </li>
+                           <li class="mb-2">
+                              <a href="#!" class="hover:text-purple-500 ">Content Writing</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="lg:col-span-3 md:col-span-6 col-span-12">
+                  <div>
+                     <div class="mb-3 pb-2 flex justify-between border-b border-gray-200 lg:border-b-0 relative">
+                        <h4 class="text-lg">About us</h4>
+                       
+                     </div>
+                     <div >
+                        <ul class=" mb-0">
+                           <li class="mb-2">
+                              <a href="#!" class="hover:text-purple-500 ">Case Studies</a>
+                           </li>
+                           <li class="mb-2">
+                              <a href="#!" class="hover:text-purple-500 ">Blog</a>
+                           </li>
+                           <li class="mb-2">
+                              <a href="#!" class="hover:text-purple-500 ">Services</a>
+                           </li>
+                           <li class="mb-2">
+                              <a href="#!" class="hover:text-purple-500 ">About</a>
+                           </li>
+                           <li class="mb-2">
+                              <a href="#!" class="hover:text-purple-500 ">Career</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="lg:col-span-3 md:col-span-6 col-span-12">
+                  <div class="mb-3 pb-2 flex justify-between border-b border-gray-200 lg:border-b-0 relative">
+                     <h4 class="text-lg">Technology</h4>
+                    
+                  </div>
+                  <div >
+                     <ul class=" mb-0">
+                        <li class="mb-2">
+                           <a href="./docs/index.html" class="hover:text-purple-500 ">Next.js</a>
+                        </li>
+                        <li class="mb-2">
+                           <a href="#!" class="hover:text-purple-500 ">Sanity</a>
+                        </li>
+                        <li class="mb-2">
+                           <a href="./changelog.html" class="hover:text-purple-500 ">Content ful</a>
+                        </li>
+                        <li class="mb-2">
+                           <a href="#!" class="hover:text-purple-500 ">Vercel</a>
+                        </li>
+                        <li class="mb-2">
+                           <a href="#!" class="hover:text-purple-500 ">Netlify</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="lg:col-span-3 md:col-span-6 col-span-12">
+                  <div class="mb-3 pb-2 flex justify-between border-b border-gray-200 lg:border-b-0 relative">
+                     <h4 class="text-lg">Locations</h4>
+                    
+                  </div>
+                  <div>
+                     <ul class=" mb-0">
+                        <li class="mb-2">
+                           <a href="./docs/index.html" class="hover:text-purple-500 ">India</a>
+                        </li>
+                        <li class="mb-2">
+                           <a href="#!" class="hover:text-purple-500 ">Australia</a>
+                        </li>
+                        <li class="mb-2">
+                           <a href="./changelog.html" class="hover:text-purple-500 ">Brazil</a>
+                        </li>
+                        <li class="mb-2">
+                           <a href="#!" class="hover:text-purple-500 ">Canada</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="lg:col-span-3 md:col-span-6 col-span-12">
+            <div class="me-7">
+               <h4 class="mb-4">Headquarters</h4>
+               <p class="">Codescandy, 412, Residency Rd, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka, India 560025</p>
+            </div>
+         </div>
+      </div>
+   </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+      <div class="grid grid-cols-12 items-center gap-6">
+         <div class="lg:col-span-3 col-span-12">
+            <a class="mb-4 mb-lg-0 block text-inverse" href="../index.html"><img src="./assets/images/logo/logo.svg" alt="" /></a>
+         </div>
+         <div class="md:col-span-9 lg:col-span-6 col-span-12">
+            <div class="text-sm mb-3 mb-lg-0 text-lg-center">
+               Copyright © 2025
+
+               <span><a href="#">Block</a></span>
+               | Designed by
+               <span><a href="https://codescandy.com" target="_blank" class="text-purple-500">CodesCandy</a> • Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a></span>
+            </div>
+         </div>
+         <div class="lg:col-span-3">
+            <div class="lg:text-end flex items-center lg:justify-end">
+
+               <div class="flex gap-4">
+                  <a href="#!" class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg>
+                  </a>
+                  <a href="#!" class="">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>
+                 </a>
+                  <a href="#!" class="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</footer>
+
+
+
+
+  <script type="module" src="./assets/js/main.js"></script>
+
+
+
+</body>
+
+</html>
